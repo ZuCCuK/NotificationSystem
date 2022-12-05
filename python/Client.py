@@ -18,5 +18,16 @@ while True:
             toast.show()
 
 
-    except:
-        pass
+ except IOError as e:
+      
+        if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
+            print('Reading error: ',e)
+            sys.exit()
+        # hiçbir veri almazsak
+        
+        continue
+
+    except Exception as e:
+        # Any other exception - something happened, exit
+        print('Reading error: ',e)
+        sys.exit()
