@@ -9,7 +9,7 @@ while True:
     try:
         msg = c.recv(1024).decode()
         print(msg)
-        if len(msg)>=10:
+        if len(msg)>=3:
             toast = Notification(app_id="BildirimSisetmi",
                                  title="Bildirim",
                                  msg=msg,
