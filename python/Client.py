@@ -18,7 +18,7 @@ while True:
             toast.show()
 
 
- except IOError as e:
+    except IOError as e:
       
         if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
             print('Reading error: ',e)
@@ -26,7 +26,6 @@ while True:
         # hiçbir veri almazsak
         
         continue
-
     except Exception as e:
         
         print('Reading error: ',e)
