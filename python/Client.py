@@ -28,6 +28,6 @@ while True:
         continue
 
     except Exception as e:
-        # Any other exception - something happened, exit
+        
         print('Reading error: ',e)
         sys.exit()
