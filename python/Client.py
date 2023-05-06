@@ -1,7 +1,6 @@
 import socket
 from winotify import Notification,audio
 
-
 c = socket.socket()
 port=9899
 c.connect(("localhost",port))
@@ -23,7 +22,6 @@ while True:
         if e.errno != errno.EAGAIN and e.errno != errno.EWOULDBLOCK:
             print('Reading error: ',e)
             sys.exit()
-        # hiçbir veri almazsak
         
         continue
     except Exception as e:
